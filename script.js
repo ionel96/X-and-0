@@ -5,7 +5,6 @@ let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const currentPlayerTurn  = () => `It's ${currentPlayer}'s turn`;
 const winningMessage = () => `Player ${currentPlayer} has won!`;
-const drawMessage = () => `Game ended, is equality!`;
 statusDisplay.innerHTML = currentPlayerTurn();
 
 const winningConditions = [
@@ -53,7 +52,7 @@ function checkResults() {
     }
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
-        statusDisplay.innerHTML = drawMessage();
+        statusDisplay.innerHTML = "Game ended, is equality!";
         gameActive = false;
         return;
     }
